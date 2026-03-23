@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,400;0,6..72,700;1,6..72,200;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#e3e3de",
+                        "on-surface-variant": "#d0c5b5",
+                        "on-primary-container": "#543d0c",
+                        "surface-tint": "#e4c285",
+                        "surface-dim": "#131313",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0e0e0e",
+                        "outline": "#998f81",
+                        "on-primary-fixed": "#261900",
+                        "on-secondary-container": "#bab8b7",
+                        "on-secondary": "#313030",
+                        "outline-variant": "#4d463a",
+                        "on-primary-fixed-variant": "#5a4312",
+                        "primary-container": "#c9a96e",
+                        "secondary": "#c9c6c5",
+                        "primary": "#e6c487",
+                        "tertiary-fixed-dim": "#c6c7c2",
+                        "surface-container-low": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#454744",
+                        "secondary-fixed": "#e5e2e1",
+                        "primary-fixed": "#ffdea4",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "tertiary-container": "#adaeaa",
+                        "inverse-primary": "#745a27",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "secondary-container": "#4a4949",
+                        "on-tertiary-fixed": "#1a1c19",
+                        "primary-fixed-dim": "#e4c285",
+                        "on-tertiary": "#2f312e",
+                        "on-primary": "#412d00",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#e5e2e1",
+                        "surface-container": "#201f1f",
+                        "surface": "#131313",
+                        "surface-container-highest": "#353534",
+                        "surface-variant": "#353534",
+                        "surface-bright": "#3a3939",
+                        "background": "#131313",
+                        "inverse-on-surface": "#313030",
+                        "tertiary": "#c9c9c5",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#474646",
+                        "on-tertiary-container": "#40423e"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0rem", "lg": "0rem", "xl": "0rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(19, 19, 19, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .gold-gradient {
+            background: linear-gradient(45deg, #E6C487, #C9A96E);
+        }
+        body {
+            background-color: #131313;
+            color: #E5E2E1;
+            font-family: 'Inter', sans-serif;
+        }
+        .editorial-shadow {
+            box-shadow: 0 40px 100px -20px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 rounded-none border-b border-[#4D463A]/20 bg-[#131313]/70 backdrop-blur-xl flex justify-between items-center px-12 py-6">
+<div class="text-2xl font-serif tracking-[0.2em] text-[#E6C487] uppercase">Jean Claude Olivier</div>
+<nav class="hidden md:flex items-center space-x-12">
+<a class="font-serif italic tracking-widest uppercase text-sm text-[#998F81] hover:text-[#E5E2E1] transition-colors duration-300" href="#">Atelier</a>
+<a class="font-serif italic tracking-widest uppercase text-sm text-[#998F81] hover:text-[#E5E2E1] transition-colors duration-300" href="#">Services</a>
+<a class="font-serif italic tracking-widest uppercase text-sm text-[#E6C487] border-b border-[#C9A96E] pb-1 font-medium" href="#">Experience</a>
+<a class="font-serif italic tracking-widest uppercase text-sm text-[#998F81] hover:text-[#E5E2E1] transition-colors duration-300" href="#">Bespoke</a>
+<a class="font-serif italic tracking-widest uppercase text-sm text-[#998F81] hover:text-[#E5E2E1] transition-colors duration-300" href="#">Contact</a>
+</nav>
+<div class="flex items-center space-x-6 text-[#C9A96E]">
+<button class="scale-100 active:scale-95 transition-transform hover:text-[#E6C487]">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+</button>
+<button class="scale-100 active:scale-95 transition-transform hover:text-[#E6C487]">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</header>
+<main class="pt-0">
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Luxury Salon Interior" class="w-full h-full object-cover scale-105" data-alt="Cinematic high fashion salon interior with gold accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcs_21DGpSZQAMU29eYph6jw5baGmjPBF4BHVyJowzHNBj7i4SW5mExttRvp9G1mEWD4M2I_uw_DKVPxojyLip93n8_Lpp11DQvHCThRKtB_27DNfzg5eaN4ubdXQYCu_JiMI0uwTyHMW9j0wjGuAuX-R-IA_hrbBWK12Kiq8Bx7oiBxdOCwoLLzJIvypu2QVRsMfC-hAWzGjlKlemTN4HfPoNQ1rCRWwtaeaH-YdTp_o4TDD_3QBjJ42bnsHtu1Td3gTWg2ZFUGM"/>
+<div class="absolute inset-0 bg-gradient-to-b from-surface/40 via-surface/20 to-surface"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-5xl">
+<span class="block font-label text-[10px] tracking-[0.3em] uppercase text-primary mb-8">L'Héritage Doré</span>
+<h1 class="font-headline text-6xl md:text-8xl lg:text-9xl text-on-surface font-extralight tracking-tighter italic leading-none mb-12">
+                    The Experience
+                </h1>
+<p class="font-body text-secondary max-w-xl mx-auto text-sm md:text-base leading-relaxed tracking-wide opacity-80">
+                    A cinematic journey of the senses where heritage meets avant-garde artistry. Every touch is a deliberate act of couture excellence.
+                </p>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
+<span class="material-symbols-outlined text-on-surface">expand_more</span>
+</div>
+</section>
+<!-- The Philosophy -->
+<section class="py-32 md:py-48 px-8 md:px-24 bg-surface">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-7">
+<h2 class="font-headline text-5xl md:text-7xl text-on-surface leading-[1.1] mb-12">
+                        Philosophy of <span class="italic text-primary">Couture Excellence.</span>
+</h2>
+</div>
+<div class="lg:col-span-5 lg:pt-12">
+<p class="font-body text-secondary text-lg leading-relaxed mb-8">
+                        At Jean Claude Olivier, we don’t just style hair; we curate an identity. Our philosophy is rooted in the belief that beauty is an individual masterpiece, requiring a meticulous eye and a silent understanding of the editorial muse within.
+                    </p>
+<div class="w-12 h-px bg-primary-container"></div>
+</div>
+</div>
+</section>
+<!-- The Rituals -->
+<section class="py-24 bg-surface-container-low">
+<div class="px-8 md:px-12 mb-24">
+<span class="font-label text-[10px] tracking-[0.2em] uppercase text-outline mb-4 block">The Journey</span>
+<h3 class="font-headline text-4xl text-on-surface">Curated Rituals</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-y border-outline-variant/20">
+<!-- Ritual 1 -->
+<div class="group border-r border-outline-variant/20 p-8 md:p-12 hover:bg-surface-container transition-colors duration-500">
+<div class="aspect-[4/5] mb-10 overflow-hidden bg-surface-container-highest">
+<img alt="Professional Consultation" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Close up of a stylist consulting with a client" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBALsC7MmUu9IbLwkfkZ6QFEKn06cJxeKrWNiWBYAa1YAwtDkwBkPO1aTzILCJA5mwIkDzEDGMw3WvXIKqvwOIJR0yduv7fy2s_FmxDHLfH4GKqg_pvtaS0bCIRAsSL6d6psVXLXxrKiw1ftNVDghRDdwhHa7LdxbzWGAA3kxicjqQX-BF1ZhqCLVCGimbQLzX9dQCepQLFDGsl_IZHUMqd7uOC3BvuTr8x4bwpBNCh80CczmZJwjYAmrz0AiPzGUNWTe5N_8pBO2I"/>
+</div>
+<span class="font-headline italic text-2xl text-primary block mb-4">01. The Consultation</span>
+<p class="font-body text-sm text-outline leading-relaxed tracking-wide">
+                        A private dialogue between artist and muse to unveil the hidden potential of your natural architecture.
+                    </p>
+</div>
+<!-- Ritual 2 -->
+<div class="group border-r border-outline-variant/20 p-8 md:p-12 hover:bg-surface-container transition-colors duration-500">
+<div class="aspect-[4/5] mb-10 overflow-hidden bg-surface-container-highest">
+<img alt="Hair Washing Ritual" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Luxury hair washing station with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGTZPIw2kV1hqQ554ydiKKcpgr-26ROUNPD15HH__rSavX8UAbw9rfaCQmyXZl0TdOLDy1nOXlcjZk8swGXu34i58iEQgpvbQZJEpMXBzsiWKY4f0Iui5FyS6DOgNg0mT6Jg4e0Ui5htt3vy_UQUBLKDRErXdjnxMLUw2BcICzvIYocGuzr8qoXuexCDQupDCplSFyVQaueO2NaKW621_rzd3S8b_tTu1jDWHsuLFcXIPdSteM3NToReJEgvn3StNQc8p975YghsY"/>
+</div>
+<span class="font-headline italic text-2xl text-primary block mb-4">02. The Signature Wash</span>
+<p class="font-body text-sm text-outline leading-relaxed tracking-wide">
+                        A sensory immersion using rare botanical elixirs and rhythmic techniques to restore vitality to every strand.
+                    </p>
+</div>
+<!-- Ritual 3 -->
+<div class="group p-8 md:p-12 hover:bg-surface-container transition-colors duration-500">
+<div class="aspect-[4/5] mb-10 overflow-hidden bg-surface-container-highest">
+<img alt="Final Styling" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Stylist applying final touches to elegant hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcIlMK7ZP_gk1QfNla6cCYE12N_ZZKN5u9pNtmCiuhwDHLZmz_ud23dam5PcEfOwfcWyB__F4S_eTmAplE2rJkqD7nTNVWE2wbcGBDPW6qTEioUpPV-xEHDY_IIH2JVJfMqKM_Wulm0Xcja2bI9cSmT3lVQ4DMAKSQcA6vRymTl81sUJZIqzXdcbQwUCzi8D0ek-31PjqEJPrwLDRRW-0E84k_lVwl_V3u-EZpIM0oUmC4BiDBB3XuQTgh4nGB8ZrRIlUrqWV-4ko"/>
+</div>
+<span class="font-headline italic text-2xl text-primary block mb-4">03. The Final Touch</span>
+<p class="font-body text-sm text-outline leading-relaxed tracking-wide">
+                        The definitive moment where vision becomes reality. Precision sculpting that defies gravity and celebrates form.
+                    </p>
+</div>
+</div>
+</section>
+<!-- The Atelier Atmosphere (Bento Grid) -->
+<section class="py-32 px-8 md:px-12 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<span class="font-label text-[10px] tracking-[0.2em] uppercase text-outline mb-4 block">The Studio</span>
+<h3 class="font-headline text-5xl text-on-surface italic">Atelier Atmosphere</h3>
+</div>
+<p class="max-w-xs font-body text-sm text-outline leading-relaxed">
+                        Surround yourself with the tactile luxury of Carrara marble, brushed gold, and silence.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[800px]">
+<div class="md:col-span-8 h-full">
+<img alt="Salon Marble Details" class="w-full h-full object-cover grayscale contrast-125" data-alt="Black and white marble texture details in salon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbxASuRW1SmEsuko_R6NSnB_Bl3DeGpuULbFIm-TR6mmyOoilWJF1gSEjt9LT1vujpoVzB0QaT0CaMcG8hJjD3GMo3GZ3CEdT84ak29cLNbZLFTslzjjJOJyVc57_U0OzCX5JkEShqbBq7HBktO_3KPPu_7Wy8OS4qwhoasmMoqzdc1NtI6r1H-SyAQx7jUaOm2RvC1lq7bjlklgfNwyGijKhYE4xgrxAJStAXJLl1MbTGLdiso3FJM4CfMRwezpAGgG52a0oTl9Q"/>
+</div>
+<div class="md:col-span-4 grid grid-rows-2 gap-6 h-full">
+<div class="h-full">
+<img alt="Gold Salon Accents" class="w-full h-full object-cover grayscale" data-alt="Close up of golden hair styling tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaII6TCLNd8E2QvbOK7DWemgzrviiab6HUyt4dh7SNKMEbufjkjG8IAr6n9IsrOC_7nexGjetvg7gCwB04-HTWz_SY0ayi051lLSp0n5YVcFl-kHoTnTXn9zuuFDSzI47uiFu6odfOVYqpv-hKPgtX45G3WQUrAryKC52ia4NacyQC_wlTtk4ucprCdiaKv9YWERKVNKJkkb3Fbz251RsXO7QTFdmx25QeNIgCumhcTlVw-1OkkXpUaaLuBS6imDp2H2897g7RY7Q"/>
+</div>
+<div class="h-full bg-surface-container flex items-center justify-center p-12 relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<div class="w-full h-full gold-gradient"></div>
+</div>
+<div class="relative z-10 text-center">
+<span class="material-symbols-outlined text-4xl text-primary mb-4" data-icon="auto_awesome">auto_awesome</span>
+<p class="font-serif italic text-xl">The art of the unspoken.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Private Suite -->
+<section class="relative py-48 px-8 overflow-hidden bg-surface-container-lowest">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16 relative z-10">
+<div class="w-full md:w-1/2">
+<img alt="Private Salon Suite" class="w-full aspect-square object-cover editorial-shadow" data-alt="Luxurious private hair salon suite with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL-6tbYtegDqNtD5dyhe_LurfoxhmF7flcNwmjZQVw_XMesRc9dpGmzYX7xgdkLXUjuDcUO7wafz9XYXuHZYXVdb8RYRIo88CoYUGVICubfzBzIMBTIW3rNN93BVfB0QciJ7O-_j1nuYHKVbgrCjWPAIbg0okI3WWmGITOrNx72pFWqXohy12R4-AWG7lUOcjFxH99QQDbQ_V1WZWbQBuvlgpOij61T9XcxuFNHp2pRSt4TazrohW5xsvggP8yH7d2Sap0_HxbY5Y"/>
+</div>
+<div class="w-full md:w-1/2 space-y-8">
+<span class="font-label text-[10px] tracking-[0.2em] uppercase text-primary-container">Exclusivity</span>
+<h3 class="font-headline text-5xl md:text-6xl text-on-surface leading-tight">The Private <br/><span class="italic">Sanctuary</span></h3>
+<p class="font-body text-outline leading-relaxed">
+                        For our high-profile clientele seeking absolute discretion, our private suites offer a fully sequestered experience with personal concierge service and bespoke amenities.
+                    </p>
+<a class="inline-flex items-center space-x-4 group" href="#">
+<span class="font-label text-xs uppercase tracking-widest text-on-surface group-hover:text-primary transition-colors">Inquire about Bespoke Suites</span>
+<span class="material-symbols-outlined text-primary text-sm group-hover:translate-x-2 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Atmospheric background detail -->
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none">
+<span class="font-headline text-[30rem] leading-none absolute -right-24 top-0 text-white select-none">JCO</span>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-8 text-center bg-surface border-t border-outline-variant/10">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-headline text-4xl md:text-6xl text-on-surface mb-12">Experience the Artistry.</h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-8">
+<button class="gold-gradient px-12 py-5 text-on-primary font-label text-xs uppercase tracking-[0.2em] font-bold hover:brightness-110 active:scale-95 transition-all w-full md:w-auto">
+                        Book Your Visit
+                    </button>
+<button class="px-12 py-5 border border-outline/20 text-on-surface font-label text-xs uppercase tracking-[0.2em] hover:bg-surface-container transition-colors w-full md:w-auto">
+                        View Lookbook
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0E0E0E] w-full border-t border-[#4D463A]/20 flex flex-col md:flex-row justify-between items-center px-12 py-10">
+<div class="mb-8 md:mb-0">
+<div class="text-lg font-serif text-[#C9A96E] uppercase tracking-widest">Jean Claude Olivier</div>
+<p class="font-sans text-[10px] tracking-[0.1rem] uppercase text-[#998F81] mt-2">© 2024 JEAN CLAUDE OLIVIER. THE EDITORIAL MUSE.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-sans text-[10px] tracking-[0.1rem] uppercase text-[#998F81] hover:text-[#E5E2E1] transition-opacity duration-300" href="#">Privacy</a>
+<a class="font-sans text-[10px] tracking-[0.1rem] uppercase text-[#998F81] hover:text-[#E5E2E1] transition-opacity duration-300" href="#">Terms</a>
+<a class="font-sans text-[10px] tracking-[0.1rem] uppercase text-[#998F81] hover:text-[#E5E2E1] transition-opacity duration-300" href="#">Atelier Locator</a>
+<a class="font-sans text-[10px] tracking-[0.1rem] uppercase text-[#998F81] hover:text-[#E5E2E1] transition-opacity duration-300" href="#">Careers</a>
+</div>
+<div class="mt-8 md:mt-0 flex space-x-6 text-[#998F81]">
+<a class="hover:text-[#E6C487] transition-colors" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+<a class="hover:text-[#E6C487] transition-colors" href="#"><span class="material-symbols-outlined" data-icon="language">language</span></a>
+</div>
+</footer>
+</body></html>

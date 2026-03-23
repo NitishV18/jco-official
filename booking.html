@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;1,6..72,200&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-container": "#4a4949",
+              "error": "#ffb4ab",
+              "outline-variant": "#4d463a",
+              "tertiary-fixed-dim": "#c6c7c2",
+              "outline": "#998f81",
+              "on-tertiary-container": "#40423e",
+              "on-tertiary-fixed-variant": "#454744",
+              "on-secondary-fixed": "#1c1b1b",
+              "surface": "#131313",
+              "secondary": "#c9c6c5",
+              "primary": "#e6c487",
+              "surface-variant": "#353534",
+              "surface-dim": "#131313",
+              "on-primary-container": "#543d0c",
+              "secondary-fixed-dim": "#c9c6c5",
+              "on-surface-variant": "#d0c5b5",
+              "surface-bright": "#3a3939",
+              "on-surface": "#e5e2e1",
+              "on-error": "#690005",
+              "surface-tint": "#e4c285",
+              "surface-container-lowest": "#0e0e0e",
+              "on-error-container": "#ffdad6",
+              "on-background": "#e5e2e1",
+              "primary-fixed": "#ffdea4",
+              "inverse-on-surface": "#313030",
+              "secondary-fixed": "#e5e2e1",
+              "inverse-primary": "#745a27",
+              "primary-fixed-dim": "#e4c285",
+              "tertiary-container": "#adaeaa",
+              "background": "#131313",
+              "inverse-surface": "#e5e2e1",
+              "on-secondary-fixed-variant": "#474646",
+              "surface-container-low": "#1c1b1b",
+              "tertiary": "#c9c9c5",
+              "on-primary-fixed": "#261900",
+              "on-tertiary-fixed": "#1a1c19",
+              "tertiary-fixed": "#e3e3de",
+              "surface-container-highest": "#353534",
+              "primary-container": "#c9a96e",
+              "surface-container": "#201f1f",
+              "on-primary-fixed-variant": "#5a4312",
+              "on-primary": "#412d00",
+              "on-secondary-container": "#bab8b7",
+              "on-secondary": "#313030",
+              "surface-container-high": "#2a2a2a",
+              "error-container": "#93000a",
+              "on-tertiary": "#2f312e"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(19, 19, 19, 0.7);
+            backdrop-filter: blur(12px);
+        }
+        .gold-shimmer:hover {
+            background: linear-gradient(45deg, #e6c487, #c9a96e);
+            color: #412d00;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-12 py-6 bg-[#131313]/70 backdrop-blur-md z-50">
+<div class="font-['Newsreader'] text-2xl tracking-[0.3em] text-[#E6C487] uppercase">JEAN CLAUDE OLIVIER</div>
+<div class="hidden md:flex gap-12">
+<a class="font-['Newsreader'] tracking-[0.2em] text-sm uppercase text-[#E5E2E1] opacity-80 hover:text-[#E6C487] transition-colors duration-300" href="#">SERVICES</a>
+<a class="font-['Newsreader'] tracking-[0.2em] text-sm uppercase text-[#E5E2E1] opacity-80 hover:text-[#E6C487] transition-colors duration-300" href="#">STYLISTS</a>
+<a class="font-['Newsreader'] tracking-[0.2em] text-sm uppercase text-[#E5E2E1] opacity-80 hover:text-[#E6C487] transition-colors duration-300" href="#">JOURNAL</a>
+<a class="font-['Newsreader'] tracking-[0.2em] text-sm uppercase text-[#E6C487] border-b border-[#C9A96E] pb-1" href="#">BOOKING</a>
+</div>
+<div class="flex items-center gap-6 text-[#E6C487]">
+<span class="material-symbols-outlined cursor-pointer hover:scale-95 duration-200 transition-transform">calendar_today</span>
+<span class="material-symbols-outlined cursor-pointer hover:scale-95 duration-200 transition-transform">person</span>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Booking Flow Content -->
+<div class="lg:col-span-8 space-y-32">
+<!-- Hero Header -->
+<section class="space-y-4" id="hero">
+<span class="font-label text-[0.6875rem] tracking-[0.3em] text-primary uppercase">Maison de Beauté</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extralight tracking-tight leading-tight">
+                    Reserve Your <br/> <i class="font-light italic">Transformation</i>
+</h1>
+</section>
+<!-- 1. Select Service -->
+<section class="space-y-12" id="services">
+<div class="flex items-baseline gap-4">
+<span class="font-headline text-4xl text-outline-variant/40">01</span>
+<h2 class="font-headline text-3xl tracking-wide uppercase">Select Service</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/20 border border-outline-variant/20">
+<!-- Service Card -->
+<button class="group relative aspect-[4/3] bg-surface-container-low overflow-hidden transition-colors hover:bg-surface-container">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity grayscale" data-alt="Close up of elegant hairstyling tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6xi7AaCSEzJnabqx09KSn0j3iUF9tLB1ZxeHCajZPjBt2j7t-dET36S-Uy3Yj0_a8mTSv1yD5WiY8LH2yHjOiHTdPKGaxWeu2dumM5ueghTt6BrsPfliQ76PC1o8T4ht-z8dJMGzkVEamDjUy4-hLrgMPF3CUEkF6Z-SjvcLJkXrAOlWZC0HAyggR-a8cSLbPLWHhSxLrgT62i_vb5WbbzSToMrWq7BECI9nbrVstlj690nGHC-LjwMf4swFwRDQVw-q2kw7tIA4"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end text-left">
+<h3 class="font-headline text-2xl tracking-widest uppercase mb-1">Hair</h3>
+<p class="font-label text-[0.6875rem] tracking-widest text-outline uppercase">Couture Cut &amp; Color</p>
+</div>
+<div class="absolute top-4 right-4 w-4 h-4 border border-primary/40 group-hover:bg-primary transition-colors"></div>
+</button>
+<!-- Service Card -->
+<button class="group relative aspect-[4/3] bg-surface-container-low overflow-hidden transition-colors hover:bg-surface-container">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity grayscale" data-alt="Modern minimalist interior with gold accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfQbfQL7JlY4mEp5gKrl87oXnGGh2dGeCDVwv5gpxHXX8cvDfBlwG928vVDm5BM1aTEl_zmme8Tkmtolj953coNRKI6fXWEVbqAh5PE-v0DjbtINGLEY9s0XPNnp0uLNNUb3cu9aQGbZTC9XsC6V_ciUb795bRSVDGVL-U6_jlZf8j_KXNRAOtGseFsUE0S10vmmsBulNerHtwomPYeUki5qbHJFlk-IAceq_Zusyp6Ado6Xlu0oeM-DqDIKbXXoGH57UiaG-1TjU"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end text-left">
+<h3 class="font-headline text-2xl tracking-widest uppercase mb-1">Nails</h3>
+<p class="font-label text-[0.6875rem] tracking-widest text-outline uppercase">Sculpted Artistry</p>
+</div>
+<div class="absolute top-4 right-4 w-4 h-4 border border-primary/40 group-hover:bg-primary transition-colors"></div>
+</button>
+<!-- Service Card -->
+<button class="group relative aspect-[4/3] bg-surface-container-low overflow-hidden transition-colors hover:bg-surface-container">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity grayscale" data-alt="High end skincare products in cinematic light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByDaK9eNOpda0tSDmLTAlwOKRmfb9vHqGcVP3pkdM8BRA5LzoT3NGQha5q7Yg3Bhn4vG9Sw4ouR0fMoPcpBWQ2wRChUtHyRzbS_ZpYIZRbmvJeC4Vs-lPSiwkWVn_xPGcmnQv3YcEBOmNLp752-cRXoAdrGH4uLCTH4IjKvZuyc59W4rpOJIiyEo3S1VdXOkhFe6-eBnxQ8P3FJ7DQPhRSKLjqWwS6qKEhx6WuKs0DVHBWQEkANAwL7YuLLd7hA2svRSnO8jEewLk"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end text-left">
+<h3 class="font-headline text-2xl tracking-widest uppercase mb-1">Skin</h3>
+<p class="font-label text-[0.6875rem] tracking-widest text-outline uppercase">Revitalizing Therapy</p>
+</div>
+<div class="absolute top-4 right-4 w-4 h-4 border border-primary/40 group-hover:bg-primary transition-colors"></div>
+</button>
+<!-- Service Card -->
+<button class="group relative aspect-[4/3] bg-surface-container-low overflow-hidden transition-colors hover:bg-surface-container">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity grayscale" data-alt="Delicate bridal silk fabric details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHnfMEDQFYA_8CPr_zM3UPRuYOltg4nj8vR4m9kOHxA59Dti8gbzafd8hlG3M_clIQUEdRUc0KO-mtT5QtXfF7Fw4SbueEI6pgqHUnHG0hwQSXJOLhXWoNOKcXcpWmhgfOTRaGYRPZrcf0_iCv_5l9SkwxtdCjZNknzUb-tXhKIYMk8KTHUe_aBWTLSLI-lrfWgHbMkQcRK_P0wV4Rbj9RKT6TQBEItvLeVyKuYsJdj4ZjWnoRhvKG-VJtMUZ6thR5uVVlhldJc3o"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end text-left">
+<h3 class="font-headline text-2xl tracking-widest uppercase mb-1">Bridal</h3>
+<p class="font-label text-[0.6875rem] tracking-widest text-outline uppercase">The Wedding Atelier</p>
+</div>
+<div class="absolute top-4 right-4 w-4 h-4 border border-primary/40 group-hover:bg-primary transition-colors"></div>
+</button>
+</div>
+</section>
+<!-- 2. Choose Stylist -->
+<section class="space-y-12" id="stylists">
+<div class="flex items-baseline gap-4">
+<span class="font-headline text-4xl text-outline-variant/40">02</span>
+<h2 class="font-headline text-3xl tracking-wide uppercase">The Artisans</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Stylist Card -->
+<div class="space-y-6 group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low relative">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="Portrait of a master barber in black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKl9CP-2T9X1ZlitBFXifLw_dqD_TNfybYNxvDDiiFFBmYZoB9_CS0TGdtl7x2tz-hUJ3gMwvFdIASUVnQCk_A_in34AD6dkyvr1txXgMn2x5XNyT1nny3jUb-J4kymZe9opLrcfJctgN0wWAtInnIH5ljTFCVS8FZZkXivoryrrAdlohMRf3Iz22ATemdHxLy5ijsxoaUkJs7_wRznTlPfXgzEeYUlnOayVxWZ0iukdRCwrDEHX4APQDdBi3MtG7Cwrl3QgQSGiY"/>
+<div class="absolute inset-0 border border-primary/0 group-hover:border-primary/20 transition-all duration-500"></div>
+</div>
+<div class="text-center">
+<h4 class="font-headline text-xl uppercase tracking-wider">Marcello Vane</h4>
+<p class="font-label text-[0.625rem] tracking-[0.2em] text-outline uppercase mt-1">Creative Director</p>
+</div>
+</div>
+<!-- Stylist Card -->
+<div class="space-y-6 group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low relative">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="Portrait of a female hair stylist in black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxM3wiO4R2FiX9wU0mRtoqOsCe2TJyKCpHAfDiea-V0srJOLhKLMfvWONk7_58DF4_cArw8a9hGpNrj6wHSyhVfVSDwlhgmtIEeiqaybim5fXYZAUZ9gkthxjFHzsC-4vOM7zmlgZrvobmXeXKONEjpfwQTCx6dJfxBMbT1Q3RmDCYsGkNr-t4A76j51_EwkEm94pKIF0P8kDotMKISYxxzz7XGvRPptl_e8MIMhG-XjttZBj_jruhNdQCYOhvMvcOcWJYwd-uhkk"/>
+<div class="absolute inset-0 border border-primary/0 group-hover:border-primary/20 transition-all duration-500"></div>
+</div>
+<div class="text-center">
+<h4 class="font-headline text-xl uppercase tracking-wider">Elena Russo</h4>
+<p class="font-label text-[0.625rem] tracking-[0.2em] text-outline uppercase mt-1">Senior Colorist</p>
+</div>
+</div>
+<!-- Stylist Card -->
+<div class="space-y-6 group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low relative">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="Portrait of an editorial hair artist in black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIgHVZQ2tbfIxHMGbXM4THERo8j8_KEIrvE9WBJuslxjxB99jD_tTL1zes8UwbRhTVfkMtsv63FjWXSWHD-MZq2f5dJ9fEBb-3JgJCdHETvVgomc5YYBmmtAw1qREzOfZSOhHhVbcVVsWNEfUxatHZeht2UR9WPiUVDuBsl7KxHxgtB8s7Xj-3KoULH2t4NOb9p1WXKwiJykBkD7emdxIgaU98OSRBIKpCEzIxh6sVfs3PUkLJ8SqVTUUSIkadOCLZEffqZAhFuSM"/>
+<div class="absolute inset-0 border border-primary/0 group-hover:border-primary/20 transition-all duration-500"></div>
+</div>
+<div class="text-center">
+<h4 class="font-headline text-xl uppercase tracking-wider">Julian Thorne</h4>
+<p class="font-label text-[0.625rem] tracking-[0.2em] text-outline uppercase mt-1">Editorial Stylist</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Date & Time -->
+<section class="space-y-12" id="schedule">
+<div class="flex items-baseline gap-4">
+<span class="font-headline text-4xl text-outline-variant/40">03</span>
+<h2 class="font-headline text-3xl tracking-wide uppercase">Availability</h2>
+</div>
+<div class="bg-surface-container-low p-10 space-y-12">
+<div class="flex justify-between items-center border-b border-outline-variant/30 pb-6">
+<button class="text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
+<h3 class="font-headline text-2xl uppercase tracking-widest">October 2024</h3>
+<button class="text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+<div class="grid grid-cols-7 gap-y-8 text-center">
+<div class="font-label text-[0.6875rem] text-outline uppercase tracking-widest">Sun</div>
+<div class="font-label text-[0.6875rem] text-outline uppercase tracking-widest">Mon</div>
+<div class="font-label text-[0.6875rem] text-outline uppercase tracking-widest">Tue</div>
+<div class="font-label text-[0.6875rem] text-outline uppercase tracking-widest">Wed</div>
+<div class="font-label text-[0.6875rem] text-outline uppercase tracking-widest">Thu</div>
+<div class="font-label text-[0.6875rem] text-outline uppercase tracking-widest">Fri</div>
+<div class="font-label text-[0.6875rem] text-outline uppercase tracking-widest">Sat</div>
+<!-- Calendar Days -->
+<button class="py-2 text-outline/30 cursor-not-allowed">29</button>
+<button class="py-2 text-outline/30 cursor-not-allowed">30</button>
+<button class="py-2 hover:text-primary transition-colors">01</button>
+<button class="py-2 hover:text-primary transition-colors">02</button>
+<button class="py-2 hover:text-primary transition-colors">03</button>
+<button class="py-2 hover:text-primary transition-colors font-bold text-primary border border-primary/30">04</button>
+<button class="py-2 hover:text-primary transition-colors">05</button>
+<!-- ... rest of days ... -->
+<button class="py-2 hover:text-primary transition-colors">06</button>
+<button class="py-2 hover:text-primary transition-colors">07</button>
+<button class="py-2 hover:text-primary transition-colors">08</button>
+<button class="py-2 hover:text-primary transition-colors">09</button>
+<button class="py-2 hover:text-primary transition-colors">10</button>
+<button class="py-2 hover:text-primary transition-colors">11</button>
+<button class="py-2 hover:text-primary transition-colors">12</button>
+</div>
+<div class="space-y-6 pt-6 border-t border-outline-variant/30">
+<p class="font-label text-[0.6875rem] tracking-widest text-outline uppercase">Preferred Time</p>
+<div class="flex flex-wrap gap-4">
+<button class="px-6 py-2 border border-outline-variant/40 text-sm hover:border-primary transition-colors">10:00 AM</button>
+<button class="px-6 py-2 border border-primary bg-primary/10 text-primary text-sm">11:30 AM</button>
+<button class="px-6 py-2 border border-outline-variant/40 text-sm hover:border-primary transition-colors">02:00 PM</button>
+<button class="px-6 py-2 border border-outline-variant/40 text-sm hover:border-primary transition-colors">04:30 PM</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Personal Details -->
+<section class="space-y-12" id="details">
+<div class="flex items-baseline gap-4">
+<span class="font-headline text-4xl text-outline-variant/40">04</span>
+<h2 class="font-headline text-3xl tracking-wide uppercase">Client Profile</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+<div class="space-y-2">
+<label class="font-label text-[0.625rem] tracking-[0.2em] text-outline uppercase">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/50 focus:ring-0 focus:border-primary px-0 pb-2 text-on-surface transition-all placeholder:text-outline/30" placeholder="E.g. Alexander Sterling" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-[0.625rem] tracking-[0.2em] text-outline uppercase">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/50 focus:ring-0 focus:border-primary px-0 pb-2 text-on-surface transition-all placeholder:text-outline/30" placeholder="alexander@prestige.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-[0.625rem] tracking-[0.2em] text-outline uppercase">Mobile Number</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/50 focus:ring-0 focus:border-primary px-0 pb-2 text-on-surface transition-all placeholder:text-outline/30" placeholder="+1 000 000 0000" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-[0.625rem] tracking-[0.2em] text-outline uppercase">Special Requests</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/50 focus:ring-0 focus:border-primary px-0 pb-2 text-on-surface transition-all placeholder:text-outline/30" placeholder="Concierge requirements..." type="text"/>
+</div>
+</div>
+</section>
+</div>
+<!-- Sticky Summary Sidebar -->
+<aside class="lg:col-span-4 lg:sticky lg:top-32 h-fit space-y-8">
+<div class="bg-surface-container p-10 border border-outline-variant/20 space-y-8">
+<h3 class="font-headline text-2xl tracking-widest uppercase border-b border-outline-variant/30 pb-6">Your Itinerary</h3>
+<div class="space-y-6">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<p class="font-label text-[0.625rem] tracking-widest text-outline uppercase">Service</p>
+<p class="font-headline text-lg">Couture Cut &amp; Finish</p>
+</div>
+<span class="text-primary text-sm font-label tracking-widest">$180</span>
+</div>
+<div class="space-y-1">
+<p class="font-label text-[0.625rem] tracking-widest text-outline uppercase">Artisan</p>
+<p class="font-headline text-lg">Marcello Vane</p>
+</div>
+<div class="space-y-1">
+<p class="font-label text-[0.625rem] tracking-widest text-outline uppercase">Schedule</p>
+<p class="font-headline text-lg">Friday, Oct 04 — 11:30 AM</p>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant/30 flex justify-between items-baseline">
+<span class="font-label text-[0.6875rem] tracking-[0.2em] text-outline uppercase">Estimated Investment</span>
+<span class="font-headline text-3xl text-primary">$180.00</span>
+</div>
+<button class="w-full py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary font-label text-[0.75rem] tracking-[0.3em] uppercase font-semibold transition-all hover:brightness-110 active:scale-[0.98]">
+                    Request An Invitation
+                </button>
+<p class="font-label text-[0.625rem] text-center text-outline/50 uppercase tracking-[0.1em]">Final confirmation will be sent via encrypted email</p>
+</div>
+<!-- Experience Note -->
+<div class="p-8 bg-surface-container-lowest border border-outline-variant/10">
+<p class="italic font-headline text-sm text-on-surface/60 leading-relaxed text-center">
+                    "Artistry is the meeting of two minds. We prepare our canvas to reflect the soul of the individual."
+                </p>
+</div>
+</aside>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-12 flex flex-col md:flex-row justify-between items-center gap-8 bg-[#0E0E0E] border-t border-[#4D463A]/20">
+<div class="font-['Newsreader'] text-xl text-[#E6C487]">JEAN CLAUDE OLIVIER</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-[0.6875rem] tracking-[0.1rem] uppercase text-[#998F81] hover:text-[#E6C487] transition-colors opacity-80 hover:opacity-100" href="#">PRIVACY POLICY</a>
+<a class="font-['Inter'] text-[0.6875rem] tracking-[0.1rem] uppercase text-[#998F81] hover:text-[#E6C487] transition-colors opacity-80 hover:opacity-100" href="#">TERMS OF SERVICE</a>
+<a class="font-['Inter'] text-[0.6875rem] tracking-[0.1rem] uppercase text-[#998F81] hover:text-[#E6C487] transition-colors opacity-80 hover:opacity-100" href="#">LOCATIONS</a>
+<a class="font-['Inter'] text-[0.6875rem] tracking-[0.1rem] uppercase text-[#998F81] hover:text-[#E6C487] transition-colors opacity-80 hover:opacity-100" href="#">CONTACT</a>
+</div>
+<div class="font-['Inter'] text-[0.6875rem] tracking-[0.1rem] uppercase text-[#998F81]">© 2024 JEAN CLAUDE OLIVIER. ALL RIGHTS RESERVED.</div>
+</footer>
+</body></html>

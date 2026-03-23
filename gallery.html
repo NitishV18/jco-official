@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gallery | JEAN CLAUDE OLIVIER</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#e4c285",
+              "surface-container": "#201f1f",
+              "on-primary": "#412d00",
+              "inverse-primary": "#745a27",
+              "surface-container-highest": "#353534",
+              "on-secondary-fixed-variant": "#474646",
+              "secondary-container": "#4a4949",
+              "tertiary": "#c9c9c5",
+              "surface-variant": "#353534",
+              "outline": "#998f81",
+              "on-surface-variant": "#d0c5b5",
+              "on-secondary": "#313030",
+              "surface-container-high": "#2a2a2a",
+              "on-tertiary-container": "#40423e",
+              "on-primary-fixed-variant": "#5a4312",
+              "surface-dim": "#131313",
+              "surface-bright": "#3a3939",
+              "on-primary-container": "#543d0c",
+              "inverse-on-surface": "#313030",
+              "on-secondary-container": "#bab8b7",
+              "on-error": "#690005",
+              "error-container": "#93000a",
+              "secondary-fixed": "#e5e2e1",
+              "on-background": "#e5e2e1",
+              "inverse-surface": "#e5e2e1",
+              "on-tertiary": "#2f312e",
+              "primary": "#e6c487",
+              "secondary": "#c9c6c5",
+              "on-tertiary-fixed-variant": "#454744",
+              "secondary-fixed-dim": "#c9c6c5",
+              "primary-fixed": "#ffdea4",
+              "tertiary-container": "#adaeaa",
+              "on-tertiary-fixed": "#1a1c19",
+              "surface-container-low": "#1c1b1b",
+              "on-secondary-fixed": "#1c1b1b",
+              "on-primary-fixed": "#261900",
+              "tertiary-fixed": "#e3e3de",
+              "outline-variant": "#4d463a",
+              "on-error-container": "#ffdad6",
+              "primary-container": "#c9a96e",
+              "error": "#ffb4ab",
+              "primary-fixed-dim": "#e4c285",
+              "background": "#131313",
+              "surface-container-lowest": "#0e0e0e",
+              "surface": "#131313",
+              "tertiary-fixed-dim": "#c6c7c2",
+              "on-surface": "#e5e2e1"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0rem", "lg": "0rem", "xl": "0rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid { column-count: 2; }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid { column-count: 3; }
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 2rem;
+        }
+        .editorial-overlay {
+            background: linear-gradient(to top, rgba(19,19,19,0.9) 0%, rgba(19,19,19,0) 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar Shell -->
+<header class="bg-[#131313]/70 backdrop-blur-md text-[#E6C487] font-['Newsreader'] italic tracking-widest uppercase fixed top-0 w-full z-50 rounded-none flex justify-between items-center px-8 py-6 w-full max-w-none">
+<div class="text-2xl font-light tracking-[0.2em] text-[#E6C487]">
+            JEAN CLAUDE OLIVIER
+        </div>
+<nav class="hidden md:flex items-center gap-12 text-sm tracking-[0.3em]">
+<a class="text-[#E5E2E1] opacity-70 hover:text-[#E6C487] transition-colors duration-500" href="#">Atelier</a>
+<a class="text-[#E6C487] border-b border-[#C9A96E] pb-1 hover:text-[#E6C487] transition-colors duration-500" href="#">Gallery</a>
+<a class="text-[#E5E2E1] opacity-70 hover:text-[#E6C487] transition-colors duration-500" href="#">Book</a>
+<a class="text-[#E5E2E1] opacity-70 hover:text-[#E6C487] transition-colors duration-500" href="#">Profile</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined scale-100 opacity-100 hover:opacity-100 transition-all text-[#E6C487]">menu</button>
+</div>
+</header>
+<main class="pt-32 pb-24 px-6 md:px-12 lg:px-24">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto mb-20 text-center">
+<span class="font-label text-[10px] uppercase tracking-[0.4em] text-primary mb-6 block">Mumbai Flagship</span>
+<h1 class="font-headline italic text-5xl md:text-7xl lg:text-8xl text-on-surface mb-8 leading-tight">
+                The Collections
+            </h1>
+<div class="w-px h-24 bg-outline-variant mx-auto mb-8 opacity-40"></div>
+</section>
+<!-- Category Filters -->
+<section class="max-w-7xl mx-auto mb-16">
+<div class="flex flex-wrap justify-center gap-8 md:gap-16 border-b border-outline-variant/20 pb-8">
+<button class="font-label text-[11px] uppercase tracking-[0.2em] text-primary border-b border-primary pb-2 transition-all">All</button>
+<button class="font-label text-[11px] uppercase tracking-[0.2em] text-on-surface/60 hover:text-primary transition-all">Couture Hair</button>
+<button class="font-label text-[11px] uppercase tracking-[0.2em] text-on-surface/60 hover:text-primary transition-all">The Bridal Collection</button>
+<button class="font-label text-[11px] uppercase tracking-[0.2em] text-on-surface/60 hover:text-primary transition-all">Nail Artistry</button>
+<button class="font-label text-[11px] uppercase tracking-[0.2em] text-on-surface/60 hover:text-primary transition-all">Salon Interiors</button>
+</div>
+</section>
+<!-- Gallery Grid -->
+<section class="max-w-7xl mx-auto">
+<div class="masonry-grid">
+<!-- Image 1: Tall Editorial -->
+<div class="masonry-item relative group overflow-hidden bg-surface-container-low cursor-pointer">
+<img alt="Editorial Hair Art" class="w-full grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out scale-100 group-hover:scale-105" data-alt="Close up of avant-garde blonde hair sculpture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgnFE8X5zVr46o-NxcQcH3gVfO0qOII2KPQ5QIFXDatxRrR5pCvgt7HneDXc62NUc0BkNoPq5ao8FnrSWHkiXaUH7ES7dvsIIrzWo9Z6VVTIKYSn_uDVYCl8DBV9qNXf2l6FMcEvgS_nHwQzcJ2PMqMILIzYWx4xMR_ppxqL47zf_YtdsN4z6SWOEuyslxfh09t5EdhtTCcxSIOt0MvyIe2h2_weFJN5q_e3ZlT6SthKaaECJNP8bA3oWUdLe9hMjHoCsErIQse7E"/>
+<div class="absolute inset-0 editorial-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="text-primary font-label text-[10px] uppercase tracking-widest mb-2">Couture Hair</span>
+<h3 class="font-headline italic text-2xl text-on-surface mb-4">L'Éclat Sculpté</h3>
+<p class="text-on-surface/70 text-sm mb-6 max-w-xs">A masterclass in precision and volume for the modern muse.</p>
+<button class="w-fit text-primary font-label text-[11px] uppercase tracking-[0.2em] border-b border-primary pb-1">View Transformation</button>
+</div>
+</div>
+<!-- Image 2: Standard Portrait -->
+<div class="masonry-item relative group overflow-hidden bg-surface-container-low cursor-pointer">
+<img alt="Salon Interior" class="w-full grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out scale-100 group-hover:scale-105" data-alt="Elegant luxury hair salon interior with gold accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1mn5WVZ7FrrXmB3PEPnwK3H8BJ_3Ygv2g_dsEejsmyt7jA1t6aLu1vJhaGIbGAn011qXLsxgyI8vxVLazp5xykVkGDQ_qak1K9HuuiT64w4RfZ27VpYcAwTt2ou-BZEM06QPyZaR8jb_krnoZtZJxxOxQHRzwMgF4bqslG2dOgvbC8sRBROOjKZ4pcw196XuQtGC4H97xPidHXbresEg1nCYP_MaKOogov6HWAvRdgoaxptmPAyt_bmrBuIkrwBO0oXXt-62wzEI"/>
+<div class="absolute inset-0 editorial-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="text-primary font-label text-[10px] uppercase tracking-widest mb-2">Atelier</span>
+<h3 class="font-headline italic text-2xl text-on-surface mb-4">The Mumbai Sanctuary</h3>
+<button class="w-fit text-primary font-label text-[11px] uppercase tracking-[0.2em] border-b border-primary pb-1">Explore Spaces</button>
+</div>
+</div>
+<!-- Image 3: Square Detail -->
+<div class="masonry-item relative group overflow-hidden bg-surface-container-low cursor-pointer">
+<img alt="Bridal Nails" class="w-full grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out scale-100 group-hover:scale-105" data-alt="Exquisite gold leaf nail art detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLdUAkl7pMNJ5RY8mMDseqjGQTtO79ZNFxbOB_lN98M4E2N7ye0aZ0XlS6XlNaFV7-u5QDV8TQCHptm77XEnbCkSzpEqWpV4QazH4vWF7NaGV8_CimeNmw6PNtCr2x9RTgBTXaA_QqNNhFKNzQb3mbx4IiKfPz8GIwxIodQKULtESQGGtPyRvWPBsHiBagmkzb5ki3ZtVxwQXuw9HYUu865TwAiBS0JzLu_ZEZ2PzauF_fh9F0jGLVwTqE8fCk5cYknDY7x1cmKco"/>
+<div class="absolute inset-0 editorial-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="text-primary font-label text-[10px] uppercase tracking-widest mb-2">Nail Artistry</span>
+<h3 class="font-headline italic text-2xl text-on-surface">Or Pur Collection</h3>
+</div>
+</div>
+<!-- Image 4: Tall Portrait -->
+<div class="masonry-item relative group overflow-hidden bg-surface-container-low cursor-pointer">
+<img alt="Bridal Look" class="w-full grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out scale-100 group-hover:scale-105" data-alt="Indian bride with intricate traditional hair jewelry" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeCVVouGYYc0jJI7P0s5ov6kSpvotFlwWmxmO9czFoVJSfypsxj6YrsZ8oz8pRi4sVaZVZKzSOGO4vHQluNTX0DLazmNRCxoucONG2AKJcLYEXYUNjbx6hVQkIX9J3YvCkxYokLcf3ROxkj_7wXRtmg9PmcL5r7esbnyxw_g5MthnvBEuCNKeRkx0Y_oyUAL0YQoV0o0l0B_fO5h22Yme5n49H6CQm_Pj36RniKFqXvzwmn_RP1icBWXKzAuBItJgxcQ3LP4CC4hc"/>
+<div class="absolute inset-0 editorial-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="text-primary font-label text-[10px] uppercase tracking-widest mb-2">The Bridal Collection</span>
+<h3 class="font-headline italic text-2xl text-on-surface mb-4">Royal Heritage</h3>
+<button class="w-fit text-primary font-label text-[11px] uppercase tracking-[0.2em] border-b border-primary pb-1">View Gallery</button>
+</div>
+</div>
+<!-- Image 5: Wide Shot -->
+<div class="masonry-item relative group overflow-hidden bg-surface-container-low cursor-pointer">
+<img alt="Hairstyling Process" class="w-full grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out scale-100 group-hover:scale-105" data-alt="Professional stylist working on long dark hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3BxS5op6pPPkXxQ8DKWd9-hNcZk1CIzsWduXq9lMWzGZWBHkCRJ-M9TP84x2m0poc_tFKsQmXB7Yns8YBBnM_QxsOItsO7_qqXptEhefi1K2Kfzfor3yZdziDVZ4vpakNTAVmEPARN4LXi1esL7av6QQHDONsgHhzyD43GlHUwT2YfguNlLypXauEsl-FKDYT3RWpGA5ULKNk2rVL4vKxJrwu56T7yMQTpXP-gHyUztalQNpOJyIKGNPpcNl8R9Wsp-T5B5I-Wzw"/>
+<div class="absolute inset-0 editorial-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="text-primary font-label text-[10px] uppercase tracking-widest mb-2">Atelier</span>
+<h3 class="font-headline italic text-2xl text-on-surface">Precision Cutting</h3>
+</div>
+</div>
+<!-- Image 6: Portrait Transformation -->
+<div class="masonry-item relative group overflow-hidden bg-surface-container-low cursor-pointer">
+<img alt="Hair Color" class="w-full grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out scale-100 group-hover:scale-105" data-alt="Luminous balayage on wavy brunette hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR8RAnhRb_ow3duA8PybPYjWryno8mWmQaGxee6GfyG9QnIdEktr8vC_wjPI2h9uTG7vBzab1C90It_UXcV7TXIXA2rShnmBzKSxfhHlVL6H0ArKZLo57dEvFmtymWsPrdEz2r_zmPj2RPvN_D3E9sQ9kigpnL56L5_192e2wA2lEOmGqwoPOFZb1UNSedkH0hYMyexSKmaf29uTEtMgnlsFHS1yo_J23lethdZX9xPRTrPgYtSjZC2Zi2rZaAdqs3YzPIdpqpPlU"/>
+<div class="absolute inset-0 editorial-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="text-primary font-label text-[10px] uppercase tracking-widest mb-2">Couture Hair</span>
+<h3 class="font-headline italic text-2xl text-on-surface mb-4">Golden Balayage</h3>
+<button class="w-fit text-primary font-label text-[11px] uppercase tracking-[0.2em] border-b border-primary pb-1">View Transformation</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Behind the Scenes Section -->
+<section class="mt-32 mb-32 bg-surface-container-low py-24 -mx-6 md:-mx-12 lg:-mx-24 px-6 md:px-12 lg:px-24">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+<div class="w-full lg:w-1/2 order-2 lg:order-1">
+<div class="relative group cursor-pointer">
+<img alt="Behind the Scenes" class="w-full aspect-video object-cover" data-alt="Black and white cinematic shot of stylist backstage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd8X8D60biMso3Hd3Cq_yR_TQgkOgZrKvvbj5rVIBtAIk87_eYSde0dMFd1IguPWlY0t8pfzbofQ5Mv7eyj4BaLTmfkjlrN0h_C0Yz88FQnSFs2JAbGIuFVoj7dFzXmcEPVIvLUMicwQ_BfJ28Km1p3oaUrp16yqYgxVNYpxpEfzot2Bx1yixgi2KMX9T4Uc_D2BxRynOiWaJN-bxXH39XwsJps-4qiSRLkuRUmwgT-2BSWzsNX2bchp3k8Bdc2gG00tysPpjvhk4"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all">
+<span class="material-symbols-outlined text-primary text-7xl font-thin">play_circle</span>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 order-1 lg:order-2">
+<span class="font-label text-[10px] uppercase tracking-[0.4em] text-primary mb-6 block">The Creative Process</span>
+<h2 class="font-headline italic text-4xl md:text-5xl text-on-surface mb-8 leading-tight">
+                        Behind the Scenes:<br/>L'Héritage Doré
+                    </h2>
+<p class="text-on-surface-variant font-body leading-relaxed mb-10 max-w-md">
+                        Witness the meticulous artistry that defines the Jean Claude Olivier experience. From initial moodboards to the final touch of gold leaf, explore the journey of our latest collection.
+                    </p>
+<button class="px-10 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-label text-xs uppercase tracking-[0.2em] hover:brightness-110 transition-all">
+                        View Full Series
+                    </button>
+</div>
+</div>
+</section>
+<!-- Book the Look CTA -->
+<section class="max-w-3xl mx-auto text-center py-24 border-t border-outline-variant/10">
+<h2 class="font-headline italic text-4xl md:text-6xl text-on-surface mb-10">
+                Inspiration Awaits
+            </h2>
+<p class="text-on-surface-variant font-body text-lg mb-12">
+                Bring your vision to life with our master artisans at the Mumbai Flagship.
+            </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="w-full md:w-auto px-12 py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary font-label text-sm uppercase tracking-[0.2em] transition-all">
+                    Book the Look
+                </button>
+<button class="w-full md:w-auto px-12 py-5 border border-outline/20 text-on-surface font-label text-sm uppercase tracking-[0.2em] hover:bg-on-surface hover:text-surface transition-all">
+                    Consult an Artist
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer Space -->
+<footer class="bg-surface-container-lowest py-20 px-8 border-t border-outline-variant/5">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="flex flex-col gap-6">
+<span class="font-headline italic text-2xl tracking-widest text-primary uppercase">JEAN CLAUDE OLIVIER</span>
+<p class="text-on-surface/40 text-[10px] uppercase tracking-widest max-w-[200px] leading-loose">
+                    Mumbai Flagship • Colaba • Mumbai 400001
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+<div class="flex flex-col gap-4">
+<span class="text-primary font-label text-[10px] uppercase tracking-widest">Collections</span>
+<a class="text-on-surface/60 text-[10px] uppercase tracking-widest hover:text-primary transition-colors" href="#">Spring 2024</a>
+<a class="text-on-surface/60 text-[10px] uppercase tracking-widest hover:text-primary transition-colors" href="#">The Icons</a>
+<a class="text-on-surface/60 text-[10px] uppercase tracking-widest hover:text-primary transition-colors" href="#">Editorial</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-primary font-label text-[10px] uppercase tracking-widest">Studio</span>
+<a class="text-on-surface/60 text-[10px] uppercase tracking-widest hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-on-surface/60 text-[10px] uppercase tracking-widest hover:text-primary transition-colors" href="#">Education</a>
+<a class="text-on-surface/60 text-[10px] uppercase tracking-widest hover:text-primary transition-colors" href="#">Journal</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-primary font-label text-[10px] uppercase tracking-widest">Social</span>
+<a class="text-on-surface/60 text-[10px] uppercase tracking-widest hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="text-on-surface/60 text-[10px] uppercase tracking-widest hover:text-primary transition-colors" href="#">Pinterest</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-outline-variant/5 flex justify-between items-center text-on-surface/20 text-[9px] uppercase tracking-[0.3em]">
+<span>© 2024 JEAN CLAUDE OLIVIER</span>
+<span>MUMBAI • PARIS • MADRID</span>
+</div>
+</footer>
+<!-- BottomNavBar Shell (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe bg-[#131313] border-t border-[#4D463A]/20">
+<a class="flex flex-col items-center justify-center text-[#998F81] py-2 scale-95 transition-transform duration-300 hover:text-[#E6C487]" href="#">
+<span class="material-symbols-outlined mb-1">auto_awesome</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-light">Atelier</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#E6C487] py-2 scale-95 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-light">Gallery</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#998F81] py-2 scale-95 transition-transform duration-300 hover:text-[#E6C487]" href="#">
+<span class="material-symbols-outlined mb-1">calendar_month</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-light">Book</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#998F81] py-2 scale-95 transition-transform duration-300 hover:text-[#E6C487]" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-light">Profile</span>
+</a>
+</nav>
+</body></html>

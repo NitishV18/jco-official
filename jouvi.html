@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,400;0,6..72,700;1,6..72,200&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#c9c9c5",
+              "on-primary": "#412d00",
+              "error-container": "#93000a",
+              "secondary-container": "#4a4949",
+              "on-surface-variant": "#d0c5b5",
+              "on-secondary-fixed": "#1c1b1b",
+              "on-error": "#690005",
+              "tertiary-fixed-dim": "#c6c7c2",
+              "surface-container": "#201f1f",
+              "tertiary-fixed": "#e3e3de",
+              "on-tertiary-fixed": "#1a1c19",
+              "on-tertiary-fixed-variant": "#454744",
+              "surface-container-low": "#1c1b1b",
+              "primary-fixed-dim": "#e4c285",
+              "secondary-fixed": "#e5e2e1",
+              "on-primary-container": "#543d0c",
+              "primary": "#e6c487",
+              "on-tertiary-container": "#40423e",
+              "on-tertiary": "#2f312e",
+              "on-secondary-fixed-variant": "#474646",
+              "primary-fixed": "#ffdea4",
+              "secondary-fixed-dim": "#c9c6c5",
+              "surface-container-lowest": "#0e0e0e",
+              "surface-container-high": "#2a2a2a",
+              "tertiary-container": "#adaeaa",
+              "on-secondary-container": "#bab8b7",
+              "on-primary-fixed": "#261900",
+              "secondary": "#c9c6c5",
+              "surface-variant": "#353534",
+              "surface-tint": "#e4c285",
+              "on-secondary": "#313030",
+              "on-error-container": "#ffdad6",
+              "outline": "#998f81",
+              "on-surface": "#e5e2e1",
+              "error": "#ffb4ab",
+              "surface-dim": "#131313",
+              "on-primary-fixed-variant": "#5a4312",
+              "surface-container-highest": "#353534",
+              "surface": "#131313",
+              "outline-variant": "#4d463a",
+              "inverse-primary": "#745a27",
+              "on-background": "#e5e2e1",
+              "inverse-on-surface": "#313030",
+              "background": "#131313",
+              "primary-container": "#c9a96e",
+              "surface-bright": "#3a3939",
+              "inverse-surface": "#e5e2e1"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-overlay {
+            background: linear-gradient(to right, #131313 0%, rgba(19, 19, 19, 0) 100%);
+        }
+        .gold-shimmer:hover {
+            background: linear-gradient(45deg, #e6c487, #ffdea4);
+        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #131313; }
+        ::-webkit-scrollbar-thumb { background: #4d463a; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#131313]/70 backdrop-blur-md flex justify-between items-center px-8 py-6 w-full">
+<div class="text-2xl font-light tracking-[0.2em] text-[#E6C487] font-['Newsreader'] uppercase">JEAN CLAUDE OLIVIER</div>
+<nav class="hidden md:flex gap-12 items-center">
+<a class="text-[#E5E2E1] font-['Newsreader'] tracking-widest uppercase text-sm hover:text-[#C9A96E] transition-colors duration-300" href="#">Home</a>
+<a class="text-[#E6C487] border-b border-[#C9A96E] font-['Newsreader'] tracking-widest uppercase text-sm" href="#">Artists</a>
+<a class="text-[#E5E2E1] font-['Newsreader'] tracking-widest uppercase text-sm hover:text-[#C9A96E] transition-colors duration-300" href="#">Book</a>
+<a class="text-[#E5E2E1] font-['Newsreader'] tracking-widest uppercase text-sm hover:text-[#C9A96E] transition-colors duration-300" href="#">Profile</a>
+</nav>
+<button class="text-[#E6C487] scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="pt-24 pb-32">
+<!-- Hero Section: Editorial Layout -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden mb-24">
+<div class="absolute inset-0 z-0">
+<img alt="Marcello Vane Portrait" class="w-full h-full object-cover grayscale opacity-60" data-alt="High fashion black and white male portrait in editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKmP84vAU7XKm2Xe_vJNwlUCYnVuhC1ybDYrwx-YlKgaCgO0c7raEDk9Jv1zPRJGnb4BgoCUdcpQ8FHyonb9ffhALG0BnQVn-vaoME1SdMKRdWC4EExylzuSqf2ZMnUAV92b4EqOKdHRUU-qtozWc9frOIWKk-W8ptbq4hZNOXq7FPuA-9FRP3W77oKAHk_zxSQvNfBxpsgaFkP4CJk63u7WoiMvH0okGzy0hk39Rl2OWyDJPcBpd4goAiRXS6ttcxDZAubB85BPk"/>
+<div class="absolute inset-0 editorial-overlay"></div>
+</div>
+<div class="container mx-auto px-8 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="flex flex-col justify-center">
+<span class="text-primary font-label text-[0.6875rem] tracking-[0.3em] uppercase mb-4">Creative Director</span>
+<h1 class="text-6xl md:text-8xl lg:text-9xl font-headline font-light italic text-on-surface leading-tight mb-8">
+                        Marcello <br/> <span class="pl-12 lg:pl-24">Vane</span>
+</h1>
+<div class="max-w-md">
+<p class="text-lg text-on-surface-variant font-light leading-relaxed mb-10 italic">
+                            "Hair is the ultimate architectural canvas. It is the only living medium that moves with the spirit of the wearer."
+                        </p>
+<a class="inline-block bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-5 text-xs font-bold tracking-[0.2em] uppercase gold-shimmer transition-all duration-300" href="#booking">
+                            Book an Appointment
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Biography & Expertise -->
+<section class="container mx-auto px-8 mb-32">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Biography -->
+<div class="lg:col-span-5">
+<h2 class="text-xs font-label tracking-[0.2rem] uppercase text-outline mb-8 flex items-center gap-4">
+<span class="w-8 h-[1px] bg-outline-variant"></span> The Pedigree
+                    </h2>
+<div class="space-y-6 text-on-surface-variant font-body font-light leading-loose text-lg">
+<p>
+                            With a career spanning over 15 years within the high-tension environment of Parisian and Milanese fashion houses, Marcello Vane has redefined the boundaries of contemporary hair design. 
+                        </p>
+<p>
+                            His journey began in the prestigious ateliers of Paris, where he mastered the discipline of the <span class="text-primary">Couture Cut</span>—a technique that treats hair as a sculptural element rather than a mere accessory. 
+                        </p>
+<p>
+                            Having served as lead stylist for global fashion weeks, Marcello's signature aesthetic is characterized by an uncompromising precision and an intuitive understanding of organic movement.
+                        </p>
+</div>
+</div>
+<!-- Expertise & Specialties -->
+<div class="lg:col-span-6 lg:col-start-7 bg-surface-container-low p-12 lg:p-16">
+<h2 class="text-xs font-label tracking-[0.2rem] uppercase text-outline mb-12">Artistic Specialties</h2>
+<ul class="space-y-12">
+<li class="group">
+<span class="text-primary-fixed-dim text-sm font-label block mb-2">01</span>
+<h3 class="text-2xl font-headline text-on-surface mb-3 group-hover:text-primary transition-colors">Couture Cut</h3>
+<p class="text-outline text-sm leading-relaxed max-w-sm">Tailored silhouettes designed to evolve with the client’s lifestyle and hair texture.</p>
+</li>
+<li class="group">
+<span class="text-primary-fixed-dim text-sm font-label block mb-2">02</span>
+<h3 class="text-2xl font-headline text-on-surface mb-3 group-hover:text-primary transition-colors">Architectural Color</h3>
+<p class="text-outline text-sm leading-relaxed max-w-sm">Dimensional placement that enhances bone structure and mimics natural light exposure.</p>
+</li>
+<li class="group">
+<span class="text-primary-fixed-dim text-sm font-label block mb-2">03</span>
+<h3 class="text-2xl font-headline text-on-surface mb-3 group-hover:text-primary transition-colors">Editorial Styling</h3>
+<p class="text-outline text-sm leading-relaxed max-w-sm">High-concept avant-garde styling for photography, film, and red-carpet appearances.</p>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Portfolio Gallery -->
+<section class="mb-32">
+<div class="container mx-auto px-8 mb-16 flex justify-between items-end">
+<div>
+<h2 class="text-xs font-label tracking-[0.2rem] uppercase text-outline mb-4">Selected Works</h2>
+<p class="text-4xl font-headline italic">Portfolio Gallery</p>
+</div>
+<div class="hidden md:block">
+<a class="text-xs font-label tracking-[0.1rem] uppercase border-b border-outline-variant pb-1 hover:border-primary transition-colors" href="#">View All Works</a>
+</div>
+</div>
+<!-- Masonry-style Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1 px-1">
+<div class="space-y-1">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container">
+<img alt="Editorial Look 1" class="w-full h-full object-cover grayscale hover:scale-105 transition-transform duration-700" data-alt="Editorial close up of high fashion hair styling on model" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhl4gO3JbWwoCvfGJ_ekYdKtEiSkWQPgjoDEtaYJsdS57z-vSNAZms1BPsiqIbpjmNg9nQ_bvDrH-jLZgxCiUNG82zEVbl2_gV6FrDVloL8X343RWASwLG_SsWHOjFjtnmAgGYaHRIK6RtOUzXwQHCpcrpmFmahQTZr7ewH7r0PHQr2yg4NKrFeeczsIyhRwNpnHYuvXo-_WFbui2x1Qunm58AI5ZFwft4hu4KMpky3BJy9A-Pr80dscWGfkpq3VuOliMUoMC8SCs"/>
+</div>
+<div class="aspect-square overflow-hidden bg-surface-container">
+<img alt="Editorial Look 2" class="w-full h-full object-cover grayscale hover:scale-105 transition-transform duration-700" data-alt="Monochrome close-up of textured editorial hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG7paAnvp9BWHsDH9MMPmKSc-8qA4jwDnY3xbjJT6cP26B87dJ70dgSR4YfZsxbgFWf9TmqEzMn9txtE3hiM9AZ--VgV8hrYK5W4380DGKQPc5Wli2hVG0EmV4F7P0OsCM1AIHm1llzgbuzyMajK6VOGYX_f6_cQpdXbpmC0nC4yBubN7dvsThCgE2U3uyGE5vgqKklYSmIavii3mA2eBMXV2daKRSW-1OoSKjhCVqplSIgJZEcwlScSHN65PrkSFgcJA66qunLyE"/>
+</div>
+</div>
+<div class="space-y-1 md:mt-12">
+<div class="aspect-[2/3] overflow-hidden bg-surface-container">
+<img alt="Editorial Look 3" class="w-full h-full object-cover grayscale hover:scale-105 transition-transform duration-700" data-alt="Avant-garde hair styling photography with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtBmxXBpvkD4Pch85dlw93Nq52hFO7FoUjvGp3SonFc3FjKNuEyS7bx9c8_CjPXAI6xdcGkYbkazRoGtzMx2aXUaAzihbsrE0QLjgWQsKqxcLrnpmxs1QDuR1AveCDkivdfagP9IhkOG_JuXwBhKxp5tVdtGTB8IoTXbJHhZX85GhtlZiYpCuDay8yi-iiHCCLU1Cy-E-kYnOYX3AF7Qhm1t6q_0GDr8XGulRUcKFP15IWvemHRm874wAtdf_KwT7qYVaix8BPSSc"/>
+</div>
+<div class="aspect-[3/4] overflow-hidden bg-surface-container">
+<img alt="Editorial Look 4" class="w-full h-full object-cover grayscale hover:scale-105 transition-transform duration-700" data-alt="Sleek architectural hair styling on fashion model" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAepjDay9vtpWyAC4M6HuCobH5j65HQja0ihFasRPx1vfg6UMcZ2CVM8i87U6oYZor6rvtBuQEGnZbJw7DhSSSiaTz6hYnIcbnyXG7Fz3tA76_zhrDOdw1_8hH7ka2HzuiuXFBekfA8GR4sJPLU00ZCKY-L3jm5ayI9vUd12f8_GoBOCFT2pgMok5OcndrqFdJalhJ4quIKaEngmunUh0U2VTthLtIzhSVM_AuzDK103Wso1HhOvsC8pQksf6P09VIxKmyih47Mj18"/>
+</div>
+</div>
+<div class="space-y-1">
+<div class="aspect-square overflow-hidden bg-surface-container">
+<img alt="Editorial Look 5" class="w-full h-full object-cover grayscale hover:scale-105 transition-transform duration-700" data-alt="High contrast black and white hair editorial" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbw7xHBZbn7zchwdgNFHrEAxMsIFSCyKfvTRGA13R4P7zASwwC7ve6SfB7mvcX9LJnrRRHoYVxM0kLVLPB6hy--LT-wFXm2Jy5Rws2IQ0JL0pozw_xbO-WDD6uRx6bqrzls6kf7tPjFRCiNNHFkDLDGpNYuRfdUxulFsOO70jlG5HfHLhQz0LII1R49UQa0MTBRDhf-bL_3NLwwk8Fhi2eAH7Qs0Vxx_YLiKlnISr5ChXfa1Tbmegh2XoqhNWzJNVMltbuBHuT2Is"/>
+</div>
+<div class="aspect-[3/4] overflow-hidden bg-surface-container">
+<img alt="Editorial Look 6" class="w-full h-full object-cover grayscale hover:scale-105 transition-transform duration-700" data-alt="Cinematic fashion hair portrait in black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIFHCvbYR89BGIlmuPnSuAmzCGnpD7DK_bIOSC533hMZ6sijEBQ1tHVy148Pwf1O8_Wy0N7WNGHDC5grTM2bJTxecTqt-AwciUqWH_u0FtBacRRODvpwC4_uegTFov1ZSSLBgc98CxhDuJGJN19XzjPFlIEfM7DHeLdRpL-YAoLnubZx6gpGd8r-0xZgVHHSadOC6IE13SpUe1-ig785ypsN-MPOJyHcjZNoNogJpoTOqhAy2UG8iSGsCILLirRfKF8xdpVlmKcTM"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="container mx-auto px-8 mb-32">
+<div class="bg-surface-container-lowest py-24 px-12 lg:px-32 relative overflow-hidden">
+<div class="absolute top-0 right-0 opacity-5 -translate-y-1/4 translate-x-1/4">
+<span class="text-[20rem] font-headline italic">"</span>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto">
+<h2 class="text-xs font-label tracking-[0.2rem] uppercase text-outline mb-16 text-center italic">The Word</h2>
+<div class="space-y-20">
+<blockquote class="text-center group">
+<p class="text-2xl md:text-3xl font-headline text-on-surface leading-relaxed mb-6 italic group-hover:text-primary transition-colors duration-500">
+                                "Marcello doesn't just cut hair; he understands the architecture of the face. Every session is a masterclass in precision."
+                            </p>
+<cite class="text-xs font-label tracking-[0.2rem] uppercase text-outline not-italic">— Elena Rossi, Fashion Editor</cite>
+</blockquote>
+<blockquote class="text-center group">
+<p class="text-2xl md:text-3xl font-headline text-on-surface leading-relaxed mb-6 italic group-hover:text-primary transition-colors duration-500">
+                                "The only artist I trust for the red carpet. He brings a Parisian soul to every look he creates."
+                            </p>
+<cite class="text-xs font-label tracking-[0.2rem] uppercase text-outline not-italic">— Julianne Meyer, Actress</cite>
+</blockquote>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="container mx-auto px-8 py-24 border-t border-outline-variant/20 text-center" id="booking">
+<h2 class="text-4xl md:text-6xl font-headline mb-12">Experience the Vision</h2>
+<div class="flex flex-col items-center gap-8">
+<a class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-16 py-6 text-sm font-bold tracking-[0.3em] uppercase gold-shimmer transition-all duration-300" href="#">
+                    Book Marcello
+                </a>
+<p class="text-outline text-sm tracking-widest uppercase">Limited availability • Atelier Private Sessions</p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-4 pb-safe bg-[#131313] border-t border-[#4D463A]/20 z-50">
+<a class="flex flex-col items-center justify-center text-[#998F81] font-['Inter'] text-[0.6875rem] tracking-[0.1rem] uppercase" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span>Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#E6C487] font-bold font-['Inter'] text-[0.6875rem] tracking-[0.1rem] uppercase" href="#">
+<span class="material-symbols-outlined mb-1">content_cut</span>
+<span>Artists</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#998F81] font-['Inter'] text-[0.6875rem] tracking-[0.1rem] uppercase" href="#">
+<span class="material-symbols-outlined mb-1">calendar_month</span>
+<span>Book</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#998F81] font-['Inter'] text-[0.6875rem] tracking-[0.1rem] uppercase" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span>Profile</span>
+</a>
+</nav>
+<!-- Secondary Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10 py-12 px-8 mb-20 md:mb-0">
+<div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-sm font-label tracking-widest text-outline uppercase">© 2024 Jean Claude Olivier</div>
+<div class="flex gap-12">
+<a class="text-xs font-label tracking-widest text-outline uppercase hover:text-primary" href="#">Instagram</a>
+<a class="text-xs font-label tracking-widest text-outline uppercase hover:text-primary" href="#">Vogue Portfolio</a>
+<a class="text-xs font-label tracking-widest text-outline uppercase hover:text-primary" href="#">Atelier</a>
+</div>
+</div>
+</footer>
+</body></html>
