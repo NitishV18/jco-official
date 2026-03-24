@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jean Claude Olivier - Nail Atelier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      :root {
+        --brand-gold: #775a19;
+        --brand-gold-light: #c5a059;
+        --brand-cream: #faf9f6;
+        --brand-cream-dark: #f4f3f1;
+        --brand-charcoal: #1a1c1a;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--brand-cream);
+        color: var(--brand-charcoal);
+        scroll-behavior: smooth;
+      }
+      .serif {
+        font-family: 'Playfair Display', serif;
+      }
+      h1, h2, h3, h4 {
+        font-family: 'Playfair Display', serif;
+      }
+      .bg-brand-gold { background-color: var(--brand-gold); }
+      .text-brand-gold { color: var(--brand-gold); }
+      .bg-brand-cream-dark { background-color: var(--brand-cream-dark); }
+      
+      /* Custom animations */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#faf9f6cc] backdrop-blur-md border-b border-[#1a1c1a0d]">
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="text-xl font-serif font-bold tracking-tighter uppercase">
+          Jean Claude Olivier
+        </div>
+        <div class="hidden md:flex items-center space-x-10">
+          <a href="#workshop" class="text-xs font-medium uppercase tracking-widest hover:text-[#775a19] transition-colors">Workshop</a>
+          <a href="#curriculum" class="text-xs font-medium uppercase tracking-widest hover:text-[#775a19] transition-colors">Curriculum</a>
+          <a href="#pricing" class="text-xs font-medium uppercase tracking-widest hover:text-[#775a19] transition-colors">Pricing</a>
+          <a href="#contact" class="text-xs font-medium uppercase tracking-widest hover:text-[#775a19] transition-colors">Contact</a>
+          <button class="bg-[#775a19] text-white px-6 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-[#c5a059] transition-all">
+            Book Now
+          </button>
+        </div>
+        <button class="md:hidden" id="menu-toggle">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden bg-[#faf9f6] border-b border-[#1a1c1a0d] px-6 py-10 flex flex-col space-y-6">
+        <a href="#workshop" class="text-sm font-medium uppercase tracking-widest">Workshop</a>
+        <a href="#curriculum" class="text-sm font-medium uppercase tracking-widest">Curriculum</a>
+        <a href="#pricing" class="text-sm font-medium uppercase tracking-widest">Pricing</a>
+        <a href="#contact" class="text-sm font-medium uppercase tracking-widest">Contact</a>
+        <button class="bg-[#775a19] text-white px-6 py-3 text-xs font-bold uppercase tracking-widest">
+          Book Now
+        </button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero -->
+      <section class="relative pt-32 pb-20 md:pt-48 md:pb-40 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          <div class="z-10 fade-in">
+            <span class="text-[10px] md:text-xs font-bold tracking-[0.3em] text-[#775a19] uppercase mb-6 block">
+              Excellence in Artistry
+            </span>
+            <h1 class="text-6xl md:text-8xl font-serif leading-[0.9] mb-8">
+              Master the <span class="italic font-normal">Art</span> of Nails
+            </h1>
+            <p class="text-lg md:text-xl text-[#1a1c1a] opacity-70 max-w-md mb-10 leading-relaxed">
+              A definitive 15-day professional workshop designed for the next generation of elite nail technicians.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <button class="bg-[#775a19] text-white px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-[#c5a059] transition-all shadow-xl shadow-[#775a1933]">
+                Enroll Now
+              </button>
+              <button class="border border-[#1a1c1a33] px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-[#1a1c1a] hover:text-white transition-all">
+                View Curriculum
+              </button>
+            </div>
+          </div>
+          <div class="relative fade-in" style="transition-delay: 0.2s;">
+            <div class="aspect-[4/5] relative z-0">
+              <img 
+                src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1000&auto=format&fit=crop" 
+                alt="Nail Artistry" 
+                class="w-full h-full object-cover rounded-2xl shadow-2xl"
+                referrerpolicy="no-referrer"
+              />
+              <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-[#775a191a] rounded-full blur-3xl -z-10"></div>
+              <div class="absolute -top-10 -right-10 w-60 h-60 bg-[#775a190d] rounded-full blur-3xl -z-10"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Curriculum -->
+      <section id="curriculum" class="py-24 md:py-40 bg-[#f4f3f180]">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="relative mb-20 fade-in">
+            <h2 class="text-5xl md:text-6xl font-serif mb-6">The Curriculum</h2>
+            <p class="text-[#1a1c1a] opacity-60 max-w-xl leading-relaxed">
+              Fifteen days of intensive, salon-standard training covering everything from anatomical basics to high-end business branding.
+            </p>
+            <span class="absolute top-0 right-0 text-7xl md:text-9xl font-serif italic text-[#1a1c1a0d] select-none pointer-events-none">
+              2024 Atelier
+            </span>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+            <!-- Module 01 -->
+            <div class="fade-in">
+              <div class="flex items-baseline gap-4 mb-6">
+                <span class="text-4xl font-serif italic text-[#775a194d]">01</span>
+                <div>
+                  <h3 class="text-xl font-bold tracking-tight mb-1">BASICS & SCIENCE</h3>
+                  <span class="text-[10px] font-bold tracking-widest text-[#775a19] uppercase">DAYS 1 - 2</span>
+                </div>
+              </div>
+              <ul class="space-y-3">
+                <li class="text-sm text-[#1a1c1a] opacity-70 flex items-center gap-3"><div class="w-1 h-1 bg-[#775a19] rounded-full"></div>Nail Anatomy & Physiology</li>
+                <li class="text-sm text-[#1a1c1a] opacity-70 flex items-center gap-3"><div class="w-1 h-1 bg-[#775a19] rounded-full"></div>Professional Hygiene & Sanitization</li>
+                <li class="text-sm text-[#1a1c1a] opacity-70 flex items-center gap-3"><div class="w-1 h-1 bg-[#775a19] rounded-full"></div>Precision Tool Kits & Ergonomics</li>
+                <li class="text-sm text-[#1a1c1a] opacity-70 flex items-center gap-3"><div class="w-1 h-1 bg-[#775a19] rounded-full"></div>Symmetry in Shaping</li>
+              </ul>
+            </div>
+            <!-- Module 02 -->
+            <div class="fade-in">
+              <div class="flex items-baseline gap-4 mb-6">
+                <span class="text-4xl font-serif italic text-[#775a194d]">02</span>
+                <div>
+                  <h3 class="text-xl font-bold tracking-tight mb-1">MANICURE & PREP</h3>
+                  <span class="text-[10px] font-bold tracking-widest text-[#775a19] uppercase">DAYS 3 - 4</span>
+                </div>
+              </div>
+              <ul class="space-y-3">
+                <li class="text-sm text-[#1a1c1a] opacity-70 flex items-center gap-3"><div class="w-1 h-1 bg-[#775a19] rounded-full"></div>Classic Russian Manicure</li>
+                <li class="text-sm text-[#1a1c1a] opacity-70 flex items-center gap-3"><div class="w-1 h-1 bg-[#775a19] rounded-full"></div>E-file Cuticle Work</li>
+                <li class="text-sm text-[#1a1c1a] opacity-70 flex items-center gap-3"><div class="w-1 h-1 bg-[#775a19] rounded-full"></div>Dry Prep Mastery</li>
+                <li class="text-sm text-[#1a1c1a] opacity-70 flex items-center gap-3"><div class="w-1 h-1 bg-[#775a19] rounded-full"></div>Lacquer Finish Techniques</li>
+              </ul>
+            </div>
+            <!-- Module 03 -->
+            <div class="fade-in">
+              <div class="flex items-baseline gap-4 mb-6">
+                <span class="text-4xl font-serif italic text-[#775a194d]">03</span>
+                <div>
+                  <h3 class="text-xl font-bold tracking-tight mb-1">GEL MASTERY</h3>
+                  <span class="text-[10px] font-bold tracking-widest text-[#775a19] uppercase">DAYS 5 - 6</span>
+                </div>
+              </div>
+              <ul class="space-y-3">
+                <li class="text-sm text-[#1a1c1a] opacity-70 flex items-center gap-3"><div class="w-1 h-1 bg-[#775a19] rounded-full"></div>Gel Polish Architecture</li>
+                <li class="text-sm text-[#1a1c1a] opacity-70 flex items-center gap-3"><div class="w-1 h-1 bg-[#775a19] rounded-full"></div>Chrome & Cat-eye FX</li>
+                <li class="text-sm text-[#1a1c1a] opacity-70 flex items-center gap-3"><div class="w-1 h-1 bg-[#775a19] rounded-full"></div>Curing Physics</li>
+                <li class="text-sm text-[#1a1c1a] opacity-70 flex items-center gap-3"><div class="w-1 h-1 bg-[#775a19] rounded-full"></div>Safe Removal Protocols</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Business Branding -->
+      <section class="py-24 md:py-40">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+          <div class="relative group fade-in">
+            <div class="aspect-square bg-[#f8d7da] rounded-3xl overflow-hidden shadow-2xl">
+               <img 
+                src="https://images.unsplash.com/photo-1594465919760-441fe5908ab0?q=80&w=1000&auto=format&fit=crop" 
+                alt="Salon Business" 
+                class="w-full h-full object-cover mix-blend-multiply opacity-80"
+                referrerpolicy="no-referrer"
+              />
+              <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-12">
+                <h4 class="text-4xl font-serif font-bold text-[#1a1c1a] mb-2 uppercase tracking-tighter">Salon Business</h4>
+                <p class="text-xl font-serif italic text-[#775a19]">Mastery</p>
+                <p class="mt-8 text-[10px] font-bold tracking-[0.5em] uppercase text-[#1a1c1a66]">Safe Work</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="fade-in">
+            <span class="text-[10px] font-bold tracking-[0.3em] text-[#775a19] uppercase mb-4 block">Capstone Day 15</span>
+            <h2 class="text-5xl font-serif mb-8 leading-tight">Business & <span class="italic font-normal">Branding</span></h2>
+            <p class="text-[#1a1c1a] opacity-70 leading-relaxed mb-12">
+              Technical skill is only half the journey. On our final day, we transform you from a technician into a brand. Learn how to price your services for profit, curate a professional Instagram portfolio, and master the high-end client experience.
+            </p>
+            
+            <div class="grid grid-cols-2 gap-8">
+              <div>
+                <h4 class="text-sm font-bold mb-3">Social Growth</h4>
+                <p class="text-xs text-[#1a1c1a] opacity-60 leading-relaxed">Lighting, angles, and editorial composition for portfolio building.</p>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold mb-3">Pricing Strategy</h4>
+                <p class="text-xs text-[#1a1c1a] opacity-60 leading-relaxed">Defining your value and upselling luxury add-ons.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Standards -->
+      <section class="py-24 bg-[#f4f3f14d]">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+          <h2 class="text-4xl font-serif mb-16 fade-in">The Atelier Standards</h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow fade-in">
+              <div class="w-12 h-12 bg-[#f4f3f1] rounded-full flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="graduation-cap" class="text-[#775a19]"></i>
+              </div>
+              <h3 class="text-lg font-bold mb-4">Master Mentors</h3>
+              <p class="text-sm text-[#1a1c1a] opacity-60 leading-relaxed">Learn directly from senior stylists with over 15 years of luxury salon experience.</p>
+            </div>
+            <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow fade-in">
+              <div class="w-12 h-12 bg-[#f4f3f1] rounded-full flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="gem" class="text-[#775a19]"></i>
+              </div>
+              <h3 class="text-lg font-bold mb-4">Elite Toolkits</h3>
+              <p class="text-sm text-[#1a1c1a] opacity-60 leading-relaxed">Each student receives a professional grade toolkit featuring premium French brands.</p>
+            </div>
+            <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow fade-in">
+              <div class="w-12 h-12 bg-[#f4f3f1] rounded-full flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="badge-check" class="text-[#775a19]"></i>
+              </div>
+              <h3 class="text-lg font-bold mb-4">Official Certification</h3>
+              <p class="text-sm text-[#1a1c1a] opacity-60 leading-relaxed">A prestigious diploma recognized across international Jean Claude Olivier locations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="py-32 bg-[#775a19] text-white text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+          <img 
+            src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=1000&auto=format&fit=crop" 
+            alt="Background Texture" 
+            class="w-full h-full object-cover"
+            referrerpolicy="no-referrer"
+          />
+        </div>
+        
+        <div class="max-w-3xl mx-auto px-6 relative z-10 fade-in">
+          <h2 class="text-5xl md:text-6xl font-serif mb-8">Begin Your Artistic Journey</h2>
+          <p class="text-white opacity-80 mb-16 leading-relaxed">
+            Spaces are strictly limited to 8 students per intake to ensure personalized attention and meticulous guidance.
+          </p>
+          
+          <div class="bg-white/10 backdrop-blur-md border border-white/20 p-10 rounded-2xl mb-12">
+            <span class="text-[10px] font-bold tracking-widest uppercase text-white opacity-60 mb-2 block">Current Availability</span>
+            <p class="text-3xl font-serif italic mb-2">Only 3 Seats Remaining</p>
+            <p class="text-xs text-white opacity-60">Next cohort starts: October 15, 2024</p>
+          </div>
+          
+          <button class="bg-white text-[#775a19] px-12 py-5 text-xs font-bold uppercase tracking-[0.2em] hover:bg-[#faf9f6] transition-all shadow-2xl">
+            Register Now
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-[#1a1c1a0d]">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-16">
+          <div class="max-w-xs">
+            <h4 class="text-lg font-serif font-bold uppercase tracking-tighter mb-4">Jean Claude Olivier Salon</h4>
+            <p class="text-xs text-[#1a1c1a] opacity-50 leading-relaxed">
+              Redefining the standards of nail artistry through education and professional excellence.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-x-10 gap-y-4">
+            <a href="#" class="text-[10px] font-bold uppercase tracking-widest text-[#1a1c1a99] hover:text-[#775a19] transition-colors">Privacy Policy</a>
+            <a href="#" class="text-[10px] font-bold uppercase tracking-widest text-[#1a1c1a99] hover:text-[#775a19] transition-colors">Terms of Service</a>
+            <a href="#" class="text-[10px] font-bold uppercase tracking-widest text-[#1a1c1a99] hover:text-[#775a19] transition-colors">Salon Locations</a>
+            <a href="#" class="text-[10px] font-bold uppercase tracking-widest text-[#1a1c1a99] hover:text-[#775a19] transition-colors">Instagram</a>
+            <a href="#" class="text-[10px] font-bold uppercase tracking-widest text-[#1a1c1a99] hover:text-[#775a19] transition-colors">Facebook</a>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-[#1a1c1a0d] flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-[10px] text-[#1a1c1a66] uppercase tracking-widest">
+            © 2024 Jean Claude Olivier Salon. All rights reserved.
+          </p>
+          <div class="flex gap-6">
+            <i data-lucide="instagram" class="w-4 h-4 text-[#1a1c1a66] hover:text-[#775a19] cursor-pointer transition-colors"></i>
+            <i data-lucide="facebook" class="w-4 h-4 text-[#1a1c1a66] hover:text-[#775a19] cursor-pointer transition-colors"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+
+      // Mobile menu toggle
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Simple intersection observer for fade-in animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+  </body>
+</html>
+
